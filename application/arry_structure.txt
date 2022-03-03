@@ -1,0 +1,37 @@
+{
+	name
+sponsorid:
+mobie_no
+email_id
+address
+ sponsorship :[{
+general :{
+amount : 
+
+},
+missionary : {
+amount :
+remarks:
+dedication :
+datetime
+frequency
+}
+child: {
+amount :
+remarks:
+dedication :
+datetime
+frequency
+}]
+}
+}
+
+$data = array();
+
+$data =array(
+    "name" => sdf
+"sponsorid" => 1254
+"mobie_no" => 54
+"email_id" =>
+address
+)

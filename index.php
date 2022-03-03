@@ -66,26 +66,35 @@
 switch (ENVIRONMENT)
 {
 	case 'development':
-		error_reporting(-1);
-		ini_set('display_errors', 1);
-	break;
+		define('DB_USERNAME', 'root');
+         define('DB_PASSWORD', '');
+         define('DB_DATABASE', 'sendemaildata');
+         define('DB_HOST', 'localhost');
+        //define('DB_USERNAME', 'ssamtorg_revathy');
+        //define('DB_PASSWORD', 'revathy@123');
+        //define('DB_DATABASE', 'ssamtorg_emailparse');
+        //define('DB_HOST', 'localhost');
+        break;	break;
 
 	case 'testing':
+	define('DB_USERNAME', 'ssamtorg_revathy');
+        define('DB_PASSWORD', 'revathy@123');
+        define('DB_DATABASE', 'ssamtorg_emailparse');
+        define('DB_HOST', 'localhost');
+	break;
 	case 'production':
-		ini_set('display_errors', 0);
-		if (version_compare(PHP_VERSION, '5.3', '>='))
-		{
-			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
-		}
-		else
-		{
-			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
-		}
+		define('DB_USERNAME', '');
+        define('DB_PASSWORD', '');
+        define('DB_DATABASE', 'fw_admin');
+        define('DB_HOST', 'localhost');
+        break;
 	break;
 
 	default:
-		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'The application environment is not set correctly.';
+		define('DB_USERNAME', 'root');
+        define('DB_PASSWORD', '');
+        define('DB_DATABASE', 'fw_admin');
+        define('DB_HOST', 'localhost');
 		exit(1); // EXIT_ERROR
 }
 

@@ -2,17 +2,17 @@
 
 class Categories extends CI_Controller 
 {
-
+/*
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('instamojo');
-		$this->load->model('Donation_model');
-		$this->load->helper('url');
+		//$this->load->library('instamojo');
+		//$this->load->model('Donation_model');
+		//$this->load->helper('url');
         
     
 	}
-
+*/
 
 	public function index()
 	{
@@ -42,22 +42,22 @@ class Categories extends CI_Controller
 		// redirect($pay_url,'refresh') ;
 
 		// $this->load->view('don_inc/header');
-          $this->load->view('welcome_message');
+        //  $this->load->view('welcome_message');
           // $this->load->view('don_inc/footer');
 	}
 
 	public function get_all()
 	{
-		$result = $this->instamojo->all_payment_request();
+		//$result = $this->instamojo->all_payment_request();
 
-		print_r($result);
+		//print_r($result);
 	}
 
 
 	public function pay_request()
 	{
 		
-		$this->load->library('instamojo');
+		/*$this->load->library('instamojo');
 		$pay = $this->instamojo->pay_request( 
 
 
@@ -73,13 +73,13 @@ class Categories extends CI_Controller
 		     		);
 
 
-		$payment_id = $pay['id'];  // <= Payment Id
+		$payment_id = $pay['id']; */ // <= Payment Id
 							      // print_r($pay) ; <=  Prints all the data from the request
 
 	}
 
 	
-
+/*
 
 	public function status()
 	{
@@ -164,16 +164,16 @@ public function categories_view()
     
   } 
 
-
+*/
 	public function registration()
 	{
 
 		
 
-		$result['type'] = $this->Donation_model->donation_type();
-		$this->session->set_flashdata('formType','registration');
+		//$result['type'] = $this->Donation_model->donation_type();
+		//$this->session->set_flashdata('formType','registration');
      $this->load->library('form_validation');
-	 $this->load->view('don_inc/donation_header');
+	// $this->load->view('don_inc/donation_header');
      $this->load->view('donations/registration');
     // $this->load->view('don_inc/footer',);
 	}

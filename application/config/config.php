@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
   /* For Local host  */
- $config['base_url'] = 'http://localhost/donate/';
+ $config['base_url'] = 'http://localhost/Donate_Git/';
   
   /* For live */
 //$config['base_url'] = 'http://partner.gemsbihar.org/';
